@@ -17,7 +17,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>${BUNDLE_IDENTIFIER}</string>
+				<string>aHR0cHM6Ly9naXRodWIuY29t</string>
 				<key>bundle-version</key>
 				<string>17</string>
 				<key>kind</key>
