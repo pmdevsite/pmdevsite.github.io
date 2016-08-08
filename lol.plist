@@ -17,13 +17,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>aHR0cHM6Ly9naXRodWIuY29t</string>
+				<string>tv.shou.airshou</string>
 				<key>bundle-version</key>
-				<string>17</string>
+				<string>29</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Screenre</string>
+				<string>AirShou</string>
 			</dict>
 		</dict>
 	</array>
