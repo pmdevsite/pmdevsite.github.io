@@ -6,3 +6,324 @@ width: 100%;
 	bottom: 0px;
 	box-shadow: 0 -4px 3px rgba(0,0,0,0.12), 0 -2px 2px rgba(0,0,0,0.24);
 	}
+
+#lefttaskbar {
+
+}
+
+#menuicon {
+	padding: 12px 14px 14px 14px; /* Top right bottom left */
+	position: absolute;
+	top: 50%;
+	border-bottom: solid 2px transparent;
+	transform: translateY(-50%);
+	transition: ease 0.4s;
+}
+
+#menuicon:hover {
+	border-bottom: solid 2px #E91E63;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#menuicon img {
+	width: 16px;
+	height: 16px;
+}
+
+#plugintaskbar {
+	float: right;
+}
+
+#timeplugin {
+	color: white;
+	font-size: 14px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	transition: ease 0.4s;
+	border-bottom: solid 2px transparent;
+}
+
+#timeplugin:hover {
+	border-bottom: solid 2px #F44336;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+#righttaskbar {
+	float: right;
+}
+
+#settingsbar {
+	transition: ease 0.4s;
+	border-bottom: solid 2px transparent;
+}
+
+#settingsbar:hover {
+	border-bottom: solid 2px #03A9F4;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.taskbaricon {
+	color: white;
+	font-size: 20px!important;
+	padding: 14px;
+	padding-left: 0;
+	padding-right: 11px;
+}
+
+#wifiicon {
+	padding-left: 14px;
+}
+
+#appmenu {
+	position: absolute;
+	bottom: 50px;
+	left: 13px;
+	width: 300px;
+	height: 400px;
+	background-color: #fff;
+	opacity: 0;
+}
+
+#calendar {
+	position: absolute;
+	bottom: 50px;
+	left: 100px;
+	width: 300px;
+	height: 500px;
+	background-color: #fff;
+	opacity: 0;
+}
+
+.calendarheader {
+	width: 100%;
+	height: 26px;
+	color: #fff;
+	background-color: #D32F2F;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.calendardate {
+	width: 100%;
+	height: 35%;
+	color: #fff;
+	background-color: #F44336;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.calendardate h2 {
+	margin: 0 auto;
+	font-size: 64px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.calendardate h3 {
+	margin: 0 auto;
+	font-size: 37px;
+}
+
+.calendardate h4 {
+	margin: 0 auto;
+	font-size: 30px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#calendarcontent {
+	width: 100%;
+	height: calc(65% - 26px);
+}
+
+.ui-datepicker,
+.ui-datepicker table,
+.ui-datepicker tr,
+.ui-datepicker td,
+.ui-datepicker th {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-spacing: 0;
+}
+
+.ui-datepicker {
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	display: none;
+}
+
+.ui-datepicker-header {
+	position: relative;
+}
+
+.ui-datepicker-title {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.ui-datepicker-month {
+	font-size: 16px;
+	position: relative;
+}
+
+.ui-datepicker-year {
+
+}
+
+.ui-datepicker-month:before {
+	display: block;
+}
+
+.ui-datepicker-calendar th {
+	font-weight: lighter;
+	color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+}
+
+.ui-datepicker-calendar {
+	width: 93%;
+}
+
+.ui-datepicker-calendar-center {
+	height: 85%;
+}
+
+.ui-datepicker-calendar td {
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-top: 7%;
+}
+
+.ui-datepicker-other-month {
+	color: #979797;
+}
+
+.ui-datepicker-prev {
+	display: none;
+}
+
+.ui-datepicker-next {
+	display: none;
+}
+
+.ui-datepicker-calendar a {
+	color: #4B4B4B;
+	text-decoration: none;
+}
+
+.ui-datepicker-today td {
+	padding-right: calc(4% - 5px);
+	padding-left: calc(4% - 5px);
+}
+
+.ui-datepicker-current-day a {
+	background-color: #F44336;
+	padding: 5px;
+	border-radius: 20px;
+	color: white;
+}
+
+.ui-datepicker-calendar tbody {
+	pointer-events: none;
+}
+
+.settingslidecont {
+	padding: 15px;
+}
+
+#settingslide {
+	position: absolute;
+	height: calc(100% - 50px);
+	width: 300px;
+	top: 0;
+	right: -300px;
+	background-color: white;
+	z-index: -1;
+}
+
+#settingslide h5 {
+	margin: 0;
+	padding-top: 5px;
+	color: rgba(0, 0, 0, 0.56);
+	font-weight: lighter;
+}
+
+#settingslide h6 {
+	margin: 0;
+	padding-top: 5px; 
+	color: rgba(0, 0, 0, 0.7);
+	font-weight: lighter;
+	font-size: 15px;
+}
+
+.settingslideitem {
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.settingslideitem span {
+	vertical-align: middle;
+	font-size: 17px;
+	line-height: -29px;
+}
+
+.settingslideicon {
+	padding-left: 5px;
+}
+
+.divider {
+	width: 100%;
+	height: 1.5px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.shadow-1 {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.shadow-2 {
+	 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-3 {
+	 box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-4 {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.shadow-5 {
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+  	font-weight: normal;
+  	font-style: normal;
+  	font-size: 24px;  /* Preferred icon size */
+  	display: inline-block;
+  	width: 1em;
+  	height: 1em;
+  	line-height: 1;
+  	text-transform: none;
+  	letter-spacing: normal;
+  	word-wrap: normal;
+
+  	/* Support for all WebKit browsers. */
+  	-webkit-font-smoothing: antialiased;
+  	/* Support for Safari and Chrome. */
+  	text-rendering: optimizeLegibility;
+
+  	/* Support for Firefox. */
+  	-moz-osx-font-smoothing: grayscale;
+
+  	/* Support for IE. */
+  	font-feature-settings: 'liga';
+}
