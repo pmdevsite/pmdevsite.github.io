@@ -1,0 +1,83 @@
+<dict>
+ <key>PayloadUUID</key>
+  <string>837AE5F3-1380-4234-BAD0-8246A644AC2F-ILNT_HostNameILNT_HostPortHTTPILNT_HostPortHTTPS-ILNT_User</string>
+
+  <!-- 
+  Customizable and displayed on the Apple UI.
+  During Profile installation, this shows up under More Details as the "Exchange Account"
+  along with the Host and EmailAddress values.
+  This is the account name shown at the bottom of the password prompt during Profile installation.
+  This is the account name shown under General - Mail, Contacts, Calendar - Account.
+  This is the account name shown in the Mail, Contact, and Calendar applications as needed.
+  -->
+		
+  <key>PayloadDisplayName</key>
+  <string>ILNT_User - IBM Traveler</string>
+
+  <!-- Customizable, but not known to be displayed on the Apple UI anywhere. -->
+  <key>PayloadDescription</key>
+  <string>IBM Traveler for ILNT_User.</string>
+
+  <!-- Customizable, but not known to be displayed on the Apple UI anywhere. -->
+  <key>PayloadOrganization</key>
+  <string>IBM Traveler</string> 
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+
+  <!-- Customizable, but not known to be displayed on the Apple UI anywhere. -->
+  <key>PayloadIdentifier</key>
+  <string>ILNT_User - IBM Traveler</string>
+
+  <key>PayloadType</key>
+  <string>com.apple.eas.account</string>
+
+  <!-- Whether or not the user should be prevented from creating mail using 
+  this account from apps other than the Mail app (for example, the Photos app). 
+  This only applies to iOS5 or later devices. Default: <false/>. -->
+  <key>PreventAppSheet</key>
+  <false/>
+
+  <!-- Whether or not mails should be prevented from being moved from the 
+  Traveler (Exchange) account into a different account. This only applies to 
+  iOS5 or later devices. Default: <true/>. -->
+  <key>PreventMove</key>
+  <true/>
+
+  <!-- Default value for the number of past days of mail to sync; this 
+  is the "Mail Days to Sync" value on the Apple UI. The user can still change the 
+  setting (higher and lower) on the Apple UI.
+  Valid values are 1, 3, 7, 14, 31, and 0 (unlimited/no limit). -->
+  <key>MailNumberOfPastDaysToSync</key>
+  <integer>3</integer>
+
+  <key>UserName</key>
+  <string>ILNT_User</string>
+
+  <key>EmailAddress</key>
+  <string>ILNT_Address</string>
+
+  <!--  If you are using a proxy between the client and the Traveler server,
+  you should set the "External Server URL" on the "IBM Traveler" tab
+  in the server document.
+  You should not need to modify the Host or SSL values (use the ILNT wildcards).
+  If you do modify this value, it cannot have "http://" or "https:// at 
+  the beginning as that is automatically prepended based on the SSL key's value.
+  ILNT_HostPath has been removed from the string below. 
+  If there is a "/" at the end of the string (for example, /traveler), Apple considers 
+  this an "invalid" account and may clear the HTTP password used to connect to the server. 
+  That is why we don't include the /traveler by default. The device will always add 
+  /Microsoft-Server-ActiveSync, but not in the UI, so if /Microsoft-Server-ActiveSync 
+  is not configured to route to Traveler on the server, the ILNT_HostPath must be added 
+  back into the Host value. 
+  For example, if you are using a proxy along with /travelertest01/traveler to point to 
+  your test Traveler server instead of your production Traveler server where the proxy 
+  changed it to /traveler and routed it to the test Traveler server based on the /travelertest01 
+  part, you would need the ILNT_HostPath in Apple.xml. -->
+  <key>Host</key>
+  <string>ILNT_HostNameILNT_HostPortHTTPILNT_HostPortHTTPS</string>
+
+  <!-- Actual values are <true/> or <false/> if not using the ILNT_HostProtocol wildcard. -->
+  <key>SSL</key>
+  ILNT_HostProtocol
+
+</dict>
