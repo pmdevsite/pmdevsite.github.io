@@ -5,7 +5,7 @@
 		<key>ConsentText</key>
 		<dict>
 			<key>default</key>
-			<string>This is an Apple Confidential profile lol - Do not distribute.</string>
+			<string>This is an Apple Confidential profile - Do not distribute.</string>
 		</dict>
 		<key>PayloadContent</key>
 		<array>
@@ -62,7 +62,7 @@
 				<key>PayloadIdentifier</key>
 				<string>com.apple.tvos.developersoftware</string>
 				<key>PayloadOrganization</key>
-				<string>TheDiamondYT</string>
+				<string>Apple Inc.</string>
 				<key>PayloadType</key>
 				<string>com.apple.defaults.managed</string>
 				<key>PayloadUUID</key>
@@ -78,7 +78,7 @@
 		<key>PayloadIdentifier</key>
 		<string>com.apple.tvos.developersoftware</string>
 		<key>PayloadOrganization</key>
-		<string>TheDiamondYT</string>
+		<string>Apple Inc.</string>
 		<key>PayloadRebootSuggested</key>
 		<true/>
 		<key>PayloadType</key>
