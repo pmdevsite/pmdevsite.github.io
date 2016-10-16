@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadIdentifier</key>
+	<string>org.sacredsf.profile.safari</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>bf900530-2306-0131-32e2-000c2944c108</string>
+	<key>PayloadOrganization</key>
+	<string>Schools of the Sacred Heart</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>PayloadDisplayName</key>
+	<string>Safari</string>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.mdm.VMServer.local.bf900530-2306-0131-32e2-000c2944c108.alacarte.customsettings.91baa300-2307-0131-32e5-000c2944c108</string>
+			<key>PayloadUUID</key>
+			<string>91baa300-2307-0131-32e5-000c2944c108</string>
+			<key>PayloadEnabled</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Custom: (com.apple.Safari)</string>
+			<key>PayloadContent</key>
+			<dict>
+				<key>com.apple.Safari</key>
+				<dict>
+					<key>Forced</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>ShowFavoritesBar</key>
+								<false/>
+								<key>AutoFillCreditCardData</key>
+								<false/>
+								<key>HomePage</key>
+								<string>http://www.sacredsf.org/</string>
+								<key>NewWindowBehavior</key>
+								<integer>0</integer>
+								<key>NewTabBehavior</key>
+								<integer>1</integer>
+								<key>AutoFillPasswords</key>
+								<false/>
+								<key>AutoFillMiscellaneousForms</key>
+								<false/>
+								<key>AutoFillFromAddressBook</key>
+								<false/>
+								<key>DownloadsPath</key>
+								<string>~/Downloads</string>
+								<key>DownloadsClearingPolicy</key>
+								<integer>1</integer>
+								<key>AlwaysShowTabBar</key>
+								<true/>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
