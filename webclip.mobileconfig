@@ -50,5 +50,7 @@
 	<string>3097fca9b1ec8942c4305e550ef1b50a</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
+	<key>RemovalPassword</key>
+			<string>123456</string>
 </dict>
 </plist>
