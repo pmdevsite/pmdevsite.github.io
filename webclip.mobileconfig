@@ -9,15 +9,7 @@
 	</dict>
 	<key>PayloadContent</key>
 	<array>
-		<dict>
-						<key>DefaultsDomainName</key>
-						<string>com.apple.appleseed.FeedbackAssistant</string>
-						<key>DefaultsData</key>
-						<dict>
-							<key>SBIconVisibility</key>
-							<true/>
-						</dict>
-					</dict>
+	
 	</array>
 	<key>PayloadDescription</key>
 	<string>my-email-address@gmail.com</string>
