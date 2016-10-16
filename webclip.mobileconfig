@@ -8,9 +8,38 @@
 		<string>APN構成プロファイル (Cellular Payload・パラメータ追加版)は実験的に提供するものです。プロファイルが期待通りに動作するか、副作用は無いかについて、十分な確認は取れていません。問題が発生した際にご自身で対応できる方以外はご利用を避けてください。IIJのてくろぐ(http://techlog.iij.ad.jp/archives/1574)の記事をもとに作成しました。by @factorymark</string>
 	</dict>
 	<key>PayloadContent</key>
-	<array>
-	
-	</array>
+		<array>
+			<dict>
+				<key>PayloadContent</key>
+				<array>
+				
+					<dict>
+						<key>DefaultsDomainName</key>
+						<string>com.apple.appleseed.FeedbackAssistant</string>
+						<key>DefaultsData</key>
+						<dict>
+							<key>SBIconVisibility</key>
+							<true/>
+						</dict>
+					</dict>
+				
+				</array>
+				<key>PayloadDescription</key>
+				<string>Configures tvOS Software Update for tvOS beta</string>
+				<key>PayloadDisplayName</key>
+				<string>tvOS Beta Software Profile</string>
+				<key>PayloadIdentifier</key>
+				<string>com.apple.tvos.developersoftware</string>
+				<key>PayloadOrganization</key>
+				<string>Apple Inc.</string>
+				<key>PayloadType</key>
+				<string>com.apple.defaults.managed</string>
+				<key>PayloadUUID</key>
+				<string>a18905e6-1302-11e6-a148-3e1d05defe78</string>
+				<key>PayloadVersion</key>
+				<integer>1</integer>
+			</dict>
+		</array>
 	<key>PayloadDescription</key>
 	<string>my-email-address@gmail.com</string>
 	<key>PayloadDisplayName</key>
