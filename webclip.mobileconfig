@@ -10,29 +10,14 @@
 	<key>PayloadContent</key>
 	<array>
 		<dict>
-			<key>FullScreen</key>
-			<true/>
-			<key>IsRemovable</key>
-			<true/>
-			<key>Label</key>
-			<string>My Gmail Account</string>
-			<key>PayloadDescription</key>
-			<string>Testing</string>
-			<key>PayloadDisplayName</key>
-			<string>Testing</string>
-			<key>PayloadIdentifier</key>
-			<string>aHR0cHM6Ly9naXRodWIuY29t</string>
-			<key>PayloadType</key>
-			<string>com.apple.webClip.managed</string>
-			<key>PayloadUUID</key>
-			<string>3097fca9b1ec8942c4305e550ef1b50a</string>
-			<key>PayloadVersion</key>
-			<real>1</real>
-			<key>Precomposed</key>
-			<true/>
-			<key>URL</key>
-			<string>http://github.com</string>
-		</dict>
+						<key>DefaultsDomainName</key>
+						<string>com.apple.appleseed.FeedbackAssistant</string>
+						<key>DefaultsData</key>
+						<dict>
+							<key>SBIconVisibility</key>
+							<true/>
+						</dict>
+					</dict>
 	</array>
 	<key>PayloadDescription</key>
 	<string>my-email-address@gmail.com</string>
