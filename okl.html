@@ -1,0 +1,442 @@
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico"><html>
+<head>
+<meta name="viewport" content="width=320"> 
+<title>
+3DSPlaza - Home
+</title>
+<style>
+div#upperdiv
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 320px;
+	height: 430px;
+	z-index: 1;
+}
+div#topscreen
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 218px;
+	width: 320px;
+	background-color: f0f0f0;
+}
+div#bottomscreen
+{
+	position: absolute;
+	top: 218px;
+	left: 0px;
+	height: 212px;
+	width: 320px;
+}
+div#scroller
+{
+	white-space:nowrap;
+	width: 30px;
+	height: 68px;
+	overflow: hidden;
+        border: none;
+        padding-left: 104px;
+        padding-right: 136px;
+}
+img.icon
+{
+       position: relative;
+       left: -55px;
+       top: -4px;
+}
+img.arrow_left
+{
+	position: absolute;
+	top: 125px;
+	left: 0px;
+}
+img.arrow_right
+{
+	position: absolute;
+	top: 125px;
+	left: 297px;
+}
+div.apptext
+{
+	padding: 5px;
+	width: 223px;
+	height: 69px;
+	background-image:url('images/apptext.png');
+        font-size: 14pt;
+        opacity: 0.7;
+}
+img.bar
+{
+	border-bottom: 1px solid black;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}
+div.popup
+{
+	z-index: 4;
+	position: absolute;
+	top: 250px;
+	left: 9px;
+	width: 280px;
+        height: 150px;
+	padding: 10px;
+	border: 2px outset black;
+	background-color: white;
+        overflow: auto;
+        font-size: 12pt;
+}
+img.closer
+{
+	color: blue;
+	position: relative;
+	left: 213px;
+}
+div.appinfo
+{
+	position: absolute;
+	top: 46px;
+	left: 7px;
+	width: 293px;
+	height: 152px;
+	border: 3px outset red;
+	padding: 5px;
+	background-color: white;
+}
+span.welcome
+{
+	position: relative;
+	top: 10px;
+	font-size: 12pt;
+}
+img.unread
+{
+	position: absolute;
+	top: 1px;
+	left: 104px;
+	z-index: 2;
+}
+</style>
+<script>
+if(window.top.location != window.location)
+{
+window.top.location = 'http://pc.3dsplaza.com';
+}
+var oldapp = '';
+var newapp = '';
+var oldapptext = "";
+var newapptext = "";
+var scroller = "";
+var apptext = 0;
+var apptexts = new Array("Information about the Nintendo 3DS","3DSPlaza chat","News and status","3DSPlaza shop","3DSPlaza forums","3D Picture Gallery","Links"); // condensed array
+var appinfo = new Array(" ","Chat with other people on 3DSPlaza","View the news and updates on 3DSPlaza","Buy more apps and games in the 3DSPlaza shop with your 3DSPoints!","Discuss anything on the forums!","<br><center><img src='picture_gallery/images/pictures_icon.png'><br><b>3D Picture Gallery</b></center>","View links to other websites");
+var imgtimer = "";
+var scrolled = 0;
+var scrollable = 'yes';
+var direction = 'right';
+function scroll()
+{
+        if(scrollable == 'yes')
+        {
+        	scrollable = 'no';
+                if(direction == 'right')
+                {
+                	if(apptext != 6)
+                	{
+                		scroller = setInterval(scroll_apps_right, 10);
+                		apptext++;
+                	}
+                	else
+                	{
+                		scrollable = 'yes';
+                	}
+                }
+                if(direction == 'left')
+                {
+                	if(apptext != 0)
+                	{
+                		scroller = setInterval(scroll_apps_left, 10);
+                		apptext--;
+                	}
+                	else
+                	{
+                		scrollable = 'yes';
+                	}
+                }
+        }
+}
+
+function scroll_apps_right()
+{
+        document.getElementById('scroller').scrollLeft = document.getElementById('scroller').scrollLeft + 4;
+        scrolled = scrolled + 4;
+	if (scrolled == 112)
+	{
+		clearInterval(scroller);
+		document.getElementById('scroller').scrollLeft = document.getElementById('scroller').scrollLeft + 4;
+                scrolled = 0;
+                oldapptext = apptext - 1 + 1;
+                newapptext = apptext + 1;
+                document.getElementById('apptext').innerHTML = apptexts[apptext];
+                oldapp = 'app_' + oldapptext;
+                newapp = 'app_' + newapptext;
+                document.getElementById(oldapp).style.visibility = 'hidden';
+                document.getElementById(newapp).style.visibility = 'visible';
+                scrollable = 'yes';
+	}
+}
+
+function scroll_apps_left()
+{
+        document.getElementById('scroller').scrollLeft = document.getElementById('scroller').scrollLeft - 4;
+        scrolled = scrolled + 4;
+	if (scrolled == 112)
+	{
+		clearInterval(scroller);
+		document.getElementById('scroller').scrollLeft = document.getElementById('scroller').scrollLeft - 4;
+                scrolled = 0;
+                document.getElementById('apptext').innerHTML = apptexts[apptext];
+                oldapptext = apptext + 1 + 1;
+                newapptext = apptext + 1;
+                oldapp = 'app_' + oldapptext;
+                newapp = 'app_' + newapptext;
+                document.getElementById(oldapp).style.visibility = 'hidden';
+                document.getElementById(newapp).style.visibility = 'visible';
+                scrollable = 'yes';
+	}
+}
+
+function openpopup(popupid)
+{
+	document.getElementById(popupid).style.visibility = "visible";
+}
+function closepopup(popupid)
+{
+	document.getElementById(popupid).style.visibility = "hidden";
+}
+</script>
+<script type="text/javascript">
+document.onkeyup = KeyCheck;       
+function KeyCheck()
+{
+   var KeyID = event.keyCode;
+switch(KeyID)
+{
+      case 37:
+      // Arrow left
+      document.getElementById('arrow_clicked_left').style.visibility = 'visible'; imgtimer=setTimeout('document.getElementById(\'arrow_clicked_left\').style.visibility =\'hidden\'',200); direction = 'left'; scroll();
+      break;
+      case 39:
+      // Arrow right
+      document.getElementById('arrow_clicked_right').style.visibility = 'visible'; imgtimer=setTimeout('document.getElementById(\'arrow_clicked_right\').style.visibility =\'hidden\'',200); direction = 'right'; scroll();
+      break;
+      case 13:
+      applicationtext = apptext + 1;
+      // alert(apptext);
+      var boxapp = 'appbox_' + applicationtext;
+      clickElement(boxapp);
+      // Open app
+      break;
+   }
+}
+</script>
+<script type="text/javascript">
+<!--
+function clickElement(elementid){
+    var e = document.getElementById(elementid);
+    if (typeof e == 'object') {
+        /*if(typeof e.click != 'undefined') {
+            e.click();
+            alert('click');
+            return false;
+        }
+        else */
+        if(document.createEvent) {
+            var evObj = document.createEvent('MouseEvents');
+            evObj.initEvent('click',true,true);
+            e.dispatchEvent(evObj);
+            // alert('createEvent');
+            return false;
+        }
+        else if(document.createEventObject) {
+            e.fireEvent('onclick');
+            // alert('createEventObject');
+            return false;
+        }
+        else {
+            e.click();
+            // alert('click');
+            return false;
+        }
+    }
+}
+//-->
+</script>
+<script>
+function showscreen(screenid,fase)
+{
+	var fase = fase + 0.1;
+	var topfase = fase * 100;
+	// alert(topfase);
+	document.getElementById(screenid).style.opacity = fase;
+	document.getElementById(screenid).style.filter = "alpha(opacity="+topfase+")";
+	if(fase <= 1)
+	{
+		if(screenid == 'topscreen')
+		{
+			showspeed = 100;
+		}
+		else
+		{
+			showspeed = 20;
+		}
+		setTimeout("showscreen('"+screenid+"',"+fase+");",showspeed);
+	}
+}
+
+
+function boot()
+{
+	 document.getElementById('app_1').style.visibility = 'visible';
+	 document.body.scrollTop=218;
+	 document.getElementById('not_loaded').style.visibility = 'hidden';
+	 clearTimeout(loadsite);
+	 document.getElementById('not_loaded').innerHTML = '';
+	 showscreen('upperdiv',0);
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35888116-2']);
+  _gaq.push(['_setDomainName', '3dsplaza.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></head>
+<div id="not_loaded" Style="visibility: visible; text-align: center; width: 100%;"><br><br><br><br>
+Loading... <img src="images/loading.gif">
+<script>var loadsite = setTimeout('document.getElementById("upperdiv").style.visibility = "visible"; document.getElementById("app_1").style.visibility = "visible";',10000);</script></div>
+<body onLoad="setTimeout('boot();',2000);">
+<div id="upperdiv" Style="visibility: visible; opacity:0;">
+<div id="topscreen">
+<center><span class="welcome">Welcome to 3DSPlaza, guest!</span></center><br>
+<div id="app_1" class="appinfo" Style="visibility: hidden;" oNclick='alert(1);'>
+Get to know everything about the Nintendo 3DS<br><center><img src='images/3ds.png' width='45%'></center>
+</div>
+<div id="app_2" class="appinfo" Style="visibility: hidden;">
+Chat with other people on 3DSPlaza
+</div>
+<div id="app_3" class="appinfo" Style="visibility: hidden;">
+View the news and updates on 3DSPlaza
+</div>
+<div id="app_4" class="appinfo" Style="visibility: hidden;">
+Buy more apps and games in the 3DSPlaza shop with your 3DSPoints!
+</div>
+<div id="app_5" class="appinfo" Style="visibility: hidden;">
+Discuss anything on the forums!
+</div>
+<div id="app_6" class="appinfo" Style="visibility: hidden;">
+<br><center><img src='picture_gallery/images/pictures_icon.png'><br><b>3D Picture Gallery</b></center>
+</div>
+<div id="app_7" class="appinfo" Style="visibility: hidden;">
+View links to other websites
+</div>
+</div>
+<div id="bottomscreen" Style="background-image:url('images/background_under_original.png');">
+<map name='iconsmap'>
+<area shape ='rect' coords ='0,0,59,27' oNclick="openpopup('profile');">
+<area shape ='rect' coords ='62,0,117,27' oNclick="openpopup('pm');">
+<area shape ='rect' coords ='124,0,188,27' oNclick="openpopup('friends');">
+<area shape ='rect' coords ='194,0,247,27' oNclick="openpopup('settings');">
+<area shape ='rect' coords ='253,0,320,27' oNclick="openpopup('help');">
+</map>
+<img src="images/bar.png" width=100% usemap='#iconsmap' class="bar"><br>
+<br>
+<center><div id="apptext" class="apptext">
+Information about the Nintendo 3DS
+</div></center>
+<img src="images/arrow_normal_left.png" id="arrow_left" class="arrow_left" Style="z-index: 2;" oNclick="document.getElementById('arrow_clicked_left').style.visibility = 'visible'; imgtimer=setTimeout('document.getElementById(\'arrow_clicked_left\').style.visibility =\'hidden\'',200); direction = 'left'; scroll()">
+<img src="images/arrow_clicked_left.png" id="arrow_clicked_left" class="arrow_left" Style="z-index: 3; visibility: hidden;">
+<img src="images/arrow_normal_right.png" id="arrow_right" class="arrow_right" oNclick="document.getElementById('arrow_clicked_right').style.visibility = 'visible'; imgtimer=setTimeout('document.getElementById(\'arrow_clicked_right\').style.visibility =\'hidden\'',200); direction = 'right'; scroll()">
+<img src="images/arrow_clicked_right.png" id="arrow_clicked_right" class="arrow_right" Style="z-index: 3; visibility: hidden;">
+
+
+
+<center>
+<div id="scroller">
+<a href='about3DS'><img class="iconbox" src="images/box_normal.png"><img id='appbox_1' class="icon" oNclick="window.location='about3DS'" src="images/icon_3dsinfo.gif"></a>
+<a href='chat'><img class="iconbox" src="images/box_normal.png"><img id='appbox_2' class="icon" oNclick="window.location='chat'" src="images/icon_chat.gif"></a>
+<a href='news.php'><img class="iconbox" src="images/box_normal.png"><img id='appbox_3' class="icon" oNclick="window.location='news.php'" src="images/icon_news.png"></a>
+<a href='#'><img class="iconbox" src="images/box_normal.png"><img id='appbox_4' class="icon"  oNclick="alert('You have to be logged in to use the 3DSPlaza shop! Click the icon on the upper left of the bottom screen to log in');"src="images/icon_shop.png"></a>
+<a href='forums'><img class="iconbox" src="images/box_normal.png"><img id='appbox_5' class="icon" oNclick="window.location='forums'" src="images/icon_forums.png"></a>
+<a href='picture_gallery'><img class="iconbox" src="images/box_normal.png"><img id='appbox_5' class="icon" oNclick="window.location='picture_gallery'" src="images/icon_picture_gallery.png"></a>
+<a href='links'><img class="iconbox" src="images/box_normal.png"><img id='appbox_6' class="icon" oNclick="window.location='links'" src="images/links.png"></a>
+</div>
+
+</center>
+</div>
+</div>
+<div id="settings" Style="visibility: hidden;" class="popup">
+<img src="images/exit.png" class="closer" oNclick="closepopup('settings');"><br>
+Change the background to:<br>
+<select id="background_selecter" oNchange="document.getElementById('background_color').value = this.value">
+<option value="original">Original</option>
+  <option value="red" SELECTED>Red</option>
+  <option value="blue">Blue</option>
+  <option value="green">Green</option>
+  <option value="pink">Pink</option>
+  
+Warning: mysql_fetch_row() expects parameter 1 to be resource, null given in /var/www/html/3dsplaza/home.php on line 501
+</select>
+<form action="/home.php" method="POST">
+<input type="hidden" value="red" name="background_color" id="background_color">
+<input type="submit" value="Change" name="background_submit">
+</form>
+<font size=2>Log in to make it stay that way</font></div>
+<div id="profile" class="popup" Style="visibility: hidden;">
+<img src="images/exit.png" class="closer" oNclick="closepopup('profile');"><br>
+	<form action="/home.php" method="POST">
+	<input type="text" name="gebruikersnaam" maxlength=15 value="Username"><br>
+	<input type="password" name="wachtwoord" value="password"><br>
+	Remember me: <input type="checkbox" name="remember_me" value="yes"><br>
+	<input type="submit" name="inloggen" value="log in">
+	</form>
+        <a href="members/register.php">I do not have an account</a>
+	</div>
+<div id="friends" class="popup" Style="visibility: hidden;">
+<img src="images/exit.png" class="closer" oNclick="closepopup('friends');"><br>
+Log in to use this feature</div>
+<div id="pm" class="popup" Style="visibility: hidden;">
+<img src="images/exit.png" class="closer" oNclick="closepopup('pm');"><br>
+Log in to use this feature</div>
+<div id="help" class="popup" Style="visibility: hidden;">
+<img src="images/exit.png" class="closer" oNclick="closepopup('help');"><br>
+Welcome to 3DSPlaza, guest<br>
+<br>
+If you have questions or need help, <a href='helpdesk'>visit the helpdesk</a>
+</div>
+<div id='footbutton' Style='visibility: hidden; position: absolute; top: 352px; left: 0px; width: 240px;'>
+<script>
+if((navigator.userAgent.match(/Nintendo 3DS/i))||
+		  (navigator.userAgent.match(/483; U; en-GB/i))){
+		
+		}
+		else
+		{
+			document.getElementById("footbutton").style.visibility = 'visible';
+			document.write("<br><center><input type='button' oNclick='window.location = \"http://3dsplaza.com/home.php?switch_computer&&switch=yes\";' value='Switch back to computer version'></center>");
+		}
+</script></div>
+</body>
+<script>setInterval("document.body.scrollTop=218;",1);</script>
+</html>
