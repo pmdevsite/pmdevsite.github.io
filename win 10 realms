@@ -7,6 +7,14 @@ Connection: keep-alive
 {"id":686765,"remoteSubscriptionId":"7a7bc42fb9ae4da5b51efa755fbd7dc3","owner":null,"ownerUUID":"2535451711971661","name":"CordingSpider13's Realm","motd":"","state":"OPEN","daysLeft":29,"expired":false,"expiredTrial":false,"worldType":"NORMAL","players":[],"maxPlayers":10,"minigameName":null,"minigameId":null,"minigameImage":null,"activeSlot":1,"slots":[{"options":"{\"slotName\":null,\"pvp\":true,\"spawnAnimals\":true,\"spawnMonsters\":true,\"spawnNPCs\":true,\"spawnProtection\":0,\"commandBlocks\":false,\"forceGameMode\":false,\"gameMode\":0,\"difficulty\":2,\"worldTemplateId\":-1,\"worldTemplateImage\":null,\"adventureMap\":false,\"resourcePackHash\":null,\"versionRef\":\"6a17fb20b03d09b222ccf37e6dd4501624849f4a\",\"versionLock\":false,\"cheatsAllowed\":false,\"texturePacksRequired\":false,\"enabledPacks\":{\"resourcePacks\":[],\"behaviorPacks\":[]},\"availablePacks\":{\"resourcePacks\":[],\"behaviorPacks\":[]}}","slotId":1}],"member":false}
 
 
+PUT /worlds/686765/close HTTP/1.1
+--->
+true
+
+PUT /worlds/686765/open HTTP/1.1
+--->
+true
+
 HTTP/1.1 200 OK GET /activities/live/players HTTP/1.1
 Content-Type: application/json
 Date: Sun, 09 Jul 2017 21:03:57 GMT
