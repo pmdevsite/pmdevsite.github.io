@@ -1,0 +1,29 @@
+HTTP/1.1 200 OK /worlds/686765 HTTP/1.1
+Content-Type: application/json
+Date: Sun, 09 Jul 2017 21:00:00 GMT
+Content-Length: 958
+Connection: keep-alive
+
+{"id":686765,"remoteSubscriptionId":"7a7bc42fb9ae4da5b51efa755fbd7dc3","owner":null,"ownerUUID":"2535451711971661","name":"CordingSpider13's Realm","motd":"","state":"OPEN","daysLeft":29,"expired":false,"expiredTrial":false,"worldType":"NORMAL","players":[],"maxPlayers":10,"minigameName":null,"minigameId":null,"minigameImage":null,"activeSlot":1,"slots":[{"options":"{\"slotName\":null,\"pvp\":true,\"spawnAnimals\":true,\"spawnMonsters\":true,\"spawnNPCs\":true,\"spawnProtection\":0,\"commandBlocks\":false,\"forceGameMode\":false,\"gameMode\":0,\"difficulty\":2,\"worldTemplateId\":-1,\"worldTemplateImage\":null,\"adventureMap\":false,\"resourcePackHash\":null,\"versionRef\":\"6a17fb20b03d09b222ccf37e6dd4501624849f4a\",\"versionLock\":false,\"cheatsAllowed\":false,\"texturePacksRequired\":false,\"enabledPacks\":{\"resourcePacks\":[],\"behaviorPacks\":[]},\"availablePacks\":{\"resourcePacks\":[],\"behaviorPacks\":[]}}","slotId":1}],"member":false}
+
+
+
+GET /worlds/686765/join HTTP/1.1
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Sun, 09 Jul 2017 21:00:11 GMT
+Content-Length: 92
+Connection: keep-alive
+
+{"address":"ec2-54-246-211-112.eu-west-1.compute.amazonaws.com:27178","pendingUpdate":false}
+
+
+
+HTTP/1.1 503 Service Unavailable (World Join Error)
+Content-Type: application/json
+Date: Sun, 09 Jul 2017 20:59:16 GMT
+Retry-After: 3
+Content-Length: 17
+Connection: keep-alive
+
+Retry again later
