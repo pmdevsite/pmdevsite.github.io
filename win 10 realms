@@ -16,6 +16,17 @@ Connection: keep-alive
 {"servers":[{"id":686765,"players":[],"full":false}]}
 
 
+GET /subscriptions/686765/details HTTP/1.1
+
+---->
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Sun, 09 Jul 2017 21:14:54 GMT
+Content-Length: 176
+Connection: keep-alive
+
+{"type":"CONSUMABLE","store":"uwp.store","startDate":1499633869357,"endDate":1502225869357,"renewalPeriod":30,"daysLeft":29,"subscriptionId":"7a7bc42fb9ae4da5b51efa755fbd7dc3"}
+
 PUT /worlds/686765/reset HTTP/1.1
 Client-Version: 1.1.3
 
@@ -28,21 +39,22 @@ Connection: keep-alive
 
 true
 
-
-POST /worlds/686765/configuration HTTP/1.1
-POST https://pocket.realms.minecraft.net/worlds/686765/configuration HTTP/1.1
+PUT https://pocket.realms.minecraft.net/invites/686765/invite/update HTTP/1.1
 Accept: */*
-Authorization: XBL3.0 x=8890711599438590576;eyJlbmMiOiJBMTI4Q0JDK0hTMjU2IiwiYWxnIjoiUlNBLU9BRVAiLCJjdHkiOiJKV1QiLCJ6aXAiOiJERUYiLCJ4NXQiOiJfd3lzeEV6dHY4UmdGLWl4cjltdy1LTTNaUG8ifQ.lwVSDZ6z1vs0izvZ47U0ohcmXaeO4PEM6nfuR6jF7etiEKkgfoPkD6zlO0dXkw92Ydm28A5doYqE415c6HY8Q4vxmqJPOlUZqW5utshxiNmpeQOnaHsf1ARUIa99GjJP-uEHHVHVvtWseasllXrVx2Ee9yEhv_fAh-5Q9YoLpacMzYX6FkpTIx4MqgJ3UK0bkRHMCiKOCtr2XCLDgK4gPhV4WW8m9RhLFS9KHMqLgq1uHqZNk6RlmVSK74WvBgUlBDgfM6iqHXCob-huKJ0FH1IgV_dRSCKQPgyKfPsp3GaiWsyImKMMb3c9PRrTW-6nZwZ9pgOgbRtIhW6os0jrCQ.g8JTrWLVcY_2sGnUj2_LJw.hitAxbkSVMV_0ORf8BtZsmJKLD6BovqBXvdik9h3QhVet46RLlf18g1w11A_h36l8pTkoZZg9Keyj-B9ffsmgKQdY5a0vUZt1okwNdQBqWRXRIckd6DWzPRIx9uI9FrJuyyDaHhdptsg8aqxRVFnXkq2tHQK1HAJZhN_4tBHvbI8eLJUtPFn004nH4e2JCQDsQMn_K9gOosMmmTn-5b1_9_B-8JMJa9fVzZT7RFrV2qNpoFIRogBwrAcB3kYOEcXtBE-Zv4_4hRlHGGPWCk4Jd0aG1sqbF1kO8ZtAHk_MbV_euGNob0pFxYwVJ1TmDwd7MY7pVIdZUAFyuTp5gkQnIZPSe5seG4EKiH5FuxJwbPbR-E7_IJOqNMmt1q3rdR7wAFO0A9GL4aHSIMB3WG1TKG6QdA81cI1tm8GzPznNcCLJD1SydTzSKG4_waNyWYT9R4dQC-mgh8HIWnOmRcY6OxvbjyZ8Fwcmb6kOAI93YJGe9SQqFW-E5XdF86bh87VWXoFOkI-NjWOEcyE0hT6jCF4-wkgHp52aZ0XpAU0nSPlosnQ7uwo7tmncW_Y7BERhDKY-TNIkcrqlMoefRM_S_ete9DBHEv9L-CbJghCQzeBq6SzF3EqEM0ZYk5ot-AMequ-vOYJjoaj8ua_tLGoe0g9AgLue-jUJq26zWS7r5FBU2WanAycobnysqX4qc40zYIuHMiL8Ld3xEa5GAs1XHKGtvV1Ise0RgffHxesev5tmSvrYJtWIp0lIVgXksiowftuEqJQ1NvRv4DvM7nMlhNWkmJDXgEDD1IkW0Oi2QuVn-LNxBCV_d0JRC3cHDBheSzdUqQ2jTh-ZyPecEjSJX8baTZUQycnPCuh-qmKYu796yasWE0SbrlOoRO5-6ARkvLge7dOaqvgmatHorH0fPaXlH_-qkYgKzWRpeK5p-Cjg7yaXwmD666QDFRm3QY1xIsJCO5HTBnkDEqXPva5jqjBXSCUzERwZBL9SaIEgW96hLOJP3yEynL_zWt9xq9lbJyByWkO6tJqaOrdFojMQSjFg0tFAO1ZQMLjM1x_QxpgT9ER1SOB-UIHePaS8J9uyO30HWzCpKJRX4E9ys9v3ORQ4aiSAQe2SJAq2RVDh63MHfsfpwpSUn8jaKfSqBvqqiwiMvCf8zZ62NU7HX8FBA-JvQSVgXaBDhNKupMG4dsGE1cW95ZpCR66p8Vg1Pq8cX3klalIeh3uIcdppybq3psSrELsDeNt6MDmRrBcsI1Jqa7kTuz6oB-u9-fteuRq1PB9zveCLP6B97j9YCXHi-6V5hlvpVitHjZWLbNcHCSayaZaG4DOWHRkKIdWFN3PhOf_rwue9pk9u4zD7OBfa4uOruBYFKsy3pOrfEBFBGpc3Lybey951sSUDI-r0B3AMVQGbRMymbBGYAk96Ac1wVdyMgszvaFajO1GCTJYNPC5RdaGNUeHKwLBdkOJwd0d_0mse34kLkUT_ADbM5UCWUk9ivPyZUfEawrJG6grAdV4mQGhLrNY298Jmdsc_YD4tA1ACYXV6oyZcVSG09wpcKfgKCkl4XIZm0IhOPw165NAPRZ4srOp8MOfPFmbKtN5rKna2IZx6F2pYF8IRNOfBZ21N1nNXEMLxPtASdIuJXSEsHi4w6eJEqgdQruCm7zcCa-10t-Z8dWhv-3aJOeJ2_y4CRHSq-pOacRZ8-YrEdejEmwpGxO77l7zFcYkRp3V.BW7wSFNskPLK7LmfFMmSkoY0X35Ao7x4VbIQh_iBJ4k
-Cache-Control: no-cache
 Charset: utf-8
 Client-Version: 1.1.3
 Content-Type: application/json
 User-Agent: MCPE/UWP
-Accept-Language: en-GB,en-US;q=0.7,en;q=0.3
-Accept-Encoding: gzip, deflate
-Host: pocket.realms.minecraft.net
-Content-Length: 112
-Connection: Keep-Alive
+
+{"invites":{"2535430636236042":"OP"}}
+
+
+POST https://pocket.realms.minecraft.net/worlds/686765/configuration HTTP/1.1
+Accept: */*
+Charset: utf-8
+Client-Version: 1.1.3
+Content-Type: application/json
+User-Agent: MCPE/UWP
 
 {"description":{"description":"","name":"Example"},"options":{"cheatsAllowed":true,"difficulty":3,"gameMode":1}}
 
