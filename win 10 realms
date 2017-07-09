@@ -16,6 +16,19 @@ Connection: keep-alive
 {"servers":[{"id":686765,"players":[],"full":false}]}
 
 
+PUT /worlds/686765/reset HTTP/1.1
+Client-Version: 1.1.3
+
+//return from above
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Date: Sun, 09 Jul 2017 21:06:52 GMT
+Content-Length: 4
+Connection: keep-alive
+
+true
+
+
 POST /worlds/686765/configuration HTTP/1.1
 POST https://pocket.realms.minecraft.net/worlds/686765/configuration HTTP/1.1
 Accept: */*
